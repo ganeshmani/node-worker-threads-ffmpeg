@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Watermark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+</head>
+
+<body>
+    <h1>Watermarkify</h1>
+
+    {{# if error }}
+    <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header">
+            {{error}}
+        </div>
+    </div>
+    {{/if}}
+
+    <form method="POST" class="ui form" enctype="multipart/form-data" action="/upload-video">
+        <div class="field">
+            <label>Upload Video</label>
+            <input type="file" name="ssvideo" accept="video/*" />
+        </div>
+        <button class="ui button">upload</button>
+    </form>
+
+
+
+
+</body>
+
+</html>
